@@ -21,7 +21,29 @@ body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--tex
 
 nav{position:fixed;top:0;width:100%;z-index:1000;padding:1.2rem 4rem;display:flex;align-items:center;justify-content:space-between;transition:all .4s;background:transparent}
 nav.scrolled{background:rgba(14,12,10,.92);backdrop-filter:blur(12px);padding:.8rem 4rem}
-.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--gold);letter-spacing:.25em;text-decoration:none}
+.nav-logo{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  text-decoration:none;
+  font-family:'Cormorant Garamond',serif;
+}
+.nav-logo span{
+  font-size:1.8rem;
+  color:var(--gold);
+  letter-spacing:.25em;
+  white-space:nowrap;
+}
+.nav-logo img{
+  height:58px;
+  width:58px;
+  object-fit:cover;
+  border-radius:50%;
+  border:1px solid rgba(201,168,76,.25);
+  padding:2px;
+  background:#fff;
+  filter: drop-shadow(0 0 12px rgba(201,168,76,.25));
+}
 .nav-links{display:flex;gap:2.5rem;list-style:none}
 .nav-links a{color:#d4c4a0;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;transition:color .3s}
 .nav-links a:hover{color:var(--gold)}
@@ -69,7 +91,11 @@ section{padding:6rem 4rem}
 
 .about{background:#fff;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center}
 .about-img-wrap{position:relative}
-.about-img{width:100%;aspect-ratio:3/4;object-fit:cover;background:linear-gradient(135deg,#2a1f0a 0%,#5a3a0a 100%);display:flex;align-items:center;justify-content:center}
+.about-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
 .about-img-inner{font-family:'Cormorant Garamond',serif;font-size:5rem;color:var(--gold);opacity:.3}
 .about-badge{position:absolute;bottom:-1.5rem;right:-1.5rem;background:var(--gold);color:var(--dark);width:100px;height:100px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:.6rem;letter-spacing:.1em;text-align:center;font-weight:600;text-transform:uppercase;line-height:1.6}
 .about-badge strong{font-size:1.8rem;font-family:'Cormorant Garamond',serif;display:block}
@@ -277,7 +303,10 @@ footer{background:var(--dark);padding:4rem;text-align:center;border-top:1px soli
 </div>
 
 <nav id="navbar">
-  <a href="#home" class="nav-logo">IVORA LUXE</a>
+  <a href="#home" class="nav-logo">
+  <img src="logo2.png" alt="Ivora Luxe Logo">
+  <span>IVORA LUXE</span>
+</a>
   <ul class="nav-links">
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
@@ -317,9 +346,14 @@ footer{background:var(--dark);padding:4rem;text-align:center;border-top:1px soli
 
 <section class="about" id="about">
   <div class="about-img-wrap">
-    <div class="about-img"><div class="about-img-inner">✦</div></div>
-    <div class="about-badge"><strong>2+</strong>Years of<br>Craftsmanship</div>
+  <div class="about-img">
+    <img src="logo.jpeg" alt="Ivora Luxe">
   </div>
+
+  <div class="about-badge">
+    <strong>2+</strong>Years of<br>Craftsmanship
+  </div>
+</div>
   <div>
     <div class="section-label">✦ Our Story</div>
     <h2 class="section-title">Crafted with<br>Passion & Precision</h2>
